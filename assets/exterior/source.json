@@ -1,0 +1,34 @@
+{
+  "source": "BPD configurator Type-E bouwnummer 97",
+  "sourceUrl": "https://bpd4.ogdb.nl/bpd/configurator/238/Lint%20fase%202/house/Type-E/97/39825/?uint=2506fcab-9993-45dc-96d5-30335b6e540d",
+  "retrieved": "2026-11-17",
+  "selectedOptions": {
+    "extension": "2400 mm",
+    "annex": "Berging added to home",
+    "roof": "Default Roof",
+    "rearDoor": "Sliding Door",
+    "storageDoor": "Default Berging Door"
+  },
+  "coordinateTransform": "planX=135.55-sourceX; planY=sourceZ; planZ=sourceY-58.95; metres, no scale",
+  "materials": "Original public project texture assignments, source texture images resized to max1024.",
+  "meshCount": 416,
+  "triangleCount": 53325,
+  "bounds": {
+    "min": [
+      -0.39000244140623863,
+      -0.42500001192092896,
+      -0.5450012207031278
+    ],
+    "max": [
+      9.149998474121105,
+      11.743058204650879,
+      13.960003662109372
+    ]
+  },
+  "rearFacadeOverride": {
+    "source": "Signed 9648 option drawing page1, options101A/102",
+    "slidingClearWidthApprox": 4.07,
+    "annexRearGlazingApprox": 1.7
+  },
+  "notes": "BPD configurable options are combined to match the supplied drawings; the signed option sheet takes precedence for the wider rear sliding window and annex rear door. Interior remains the measured independent walkthrough."
+}

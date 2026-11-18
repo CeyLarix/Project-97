@@ -1,0 +1,1036 @@
+{
+  "schemaVersion": 1,
+  "brand": "Rivièra Maison",
+  "brandLine": "Rivièra Maison Flooring",
+  "title": "Rivièra Maison · complete officiële PVC-collectie",
+  "verifiedAt": "2026-11-17",
+  "officialSite": "https://www.rivieramaisonflooring.com",
+  "officialCollectionURL": "https://www.rivieramaisonflooring.com/collecties/long-island",
+  "coverage": {
+    "status": "complete-for-current-official-public-pvc-catalog",
+    "collectionCount": 1,
+    "designCount": 6,
+    "productVariantCount": 12,
+    "patterns": [
+      "Longboard",
+      "Visgraat"
+    ],
+    "installationSystems": [
+      "Dryback (te verlijmen)"
+    ],
+    "evidence": [
+      {
+        "url": "https://www.rivieramaisonflooring.com/collecties",
+        "finding": "Publiek collectieoverzicht scheidt PVC Long Island van Ceramic Selection."
+      },
+      {
+        "url": "https://www.rivieramaisonflooring.com/collecties/long-island",
+        "finding": "Collectie noemt 6 ontwerpen en linkt precies de zes opgenomen designpagina’s."
+      },
+      {
+        "url": "https://www.rivieramaisonflooring.com/sitemap.xml",
+        "finding": "Sitemapindex verwijst naar sitemap-0.xml."
+      },
+      {
+        "url": "https://www.rivieramaisonflooring.com/sitemap-0.xml",
+        "finding": "Nederlandse sitemap bevat precies zes productpagina’s onder /collecties/long-island/; alle zes bezocht."
+      },
+      {
+        "url": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+        "finding": "Technische fiche per legpatroon: Longboard 1524×230×2,5 mm; Visgraat 770×154×2,5 mm; beide dryback."
+      },
+      {
+        "url": "https://rivieramaison.com/partners/",
+        "finding": "Hoofdmerk noemt Rivièra Maison Flooring als officiële partner voor vloeren en tegels."
+      }
+    ],
+    "productPages": [
+      "https://www.rivieramaisonflooring.com/collecties/long-island/bayville-wood",
+      "https://www.rivieramaisonflooring.com/collecties/long-island/gibson-beach",
+      "https://www.rivieramaisonflooring.com/collecties/long-island/hempstead-grey",
+      "https://www.rivieramaisonflooring.com/collecties/long-island/long-beach-sand",
+      "https://www.rivieramaisonflooring.com/collecties/long-island/montauk-dark",
+      "https://www.rivieramaisonflooring.com/collecties/long-island/riverside-oak"
+    ],
+    "variantEvidence": "Alle zes productpagina’s vermelden twee uitvoeringen: Longboard en Visgraat; zes designs maal twee uitvoeringen geeft twaalf keuzes.",
+    "notListedAsPVC": [
+      "Klik-PVC",
+      "Hongaarse punt",
+      "Steenlook PVC"
+    ],
+    "excludedNonPVCCollection": "Ceramic Selection — keramische tegels, geen PVC",
+    "scopeNote": "Compleet voor de publiek gepubliceerde officiële PVC-collectie op de verificatiedatum; geen uitspraak over toekomstig, dealerexclusief of uitlopend assortiment buiten die bron."
+  },
+  "renderingNotice": "3D-kleur, nerf en patroon zijn een digitale sfeerbenadering. De fabrikant publiceert detailfoto’s; er is geen naadloze materiaalscan gevonden. Gebruik een echte staal voor definitieve kleurkeuze.",
+  "imageRightsNotice": "Productfoto’s zijn ongewijzigd afkomstig van Rivièra Maison Flooring en blijven eigendom van de rechthebbende; geen CC0-claim.",
+  "assetBytes": 4196526,
+  "designs": [
+    {
+      "id": "riviera-long-beach-sand",
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Long Beach Sand",
+      "collection": "Long Island",
+      "color": "Long Beach Sand",
+      "tone": "licht warm zand",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#baa184",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/long-beach-sand",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/long-beach-sand.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "patterns": [
+        "plank",
+        "herringbone"
+      ]
+    },
+    {
+      "id": "riviera-gibson-beach",
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Gibson Beach",
+      "collection": "Long Island",
+      "color": "Gibson Beach",
+      "tone": "licht hout met warme gloed",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b69c80",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/gibson-beach",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-gibson-beach.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/gibson-beach.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "patterns": [
+        "plank",
+        "herringbone"
+      ]
+    },
+    {
+      "id": "riviera-bayville-wood",
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Bayville Wood",
+      "collection": "Long Island",
+      "color": "Bayville Wood",
+      "tone": "natuurlijk warm beige hout",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b8a084",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/bayville-wood",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-bayville-wood.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/bayville-wood.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "patterns": [
+        "plank",
+        "herringbone"
+      ]
+    },
+    {
+      "id": "riviera-hempstead-grey",
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Hempstead Grey",
+      "collection": "Long Island",
+      "color": "Hempstead Grey",
+      "tone": "zacht warmgrijs",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b7aca0",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/hempstead-grey",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/hempstead-grey.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "sourceImageWarning": "De officiële close-up li-hempstead-grey.jpg is byte-identiek aan li-long-beach-sand-visgraat.jpg. De gepubliceerde afbeelding is ongewijzigd opgenomen; de fabrikant omschrijft Hempstead Grey als zacht warmgrijs.",
+      "patterns": [
+        "plank",
+        "herringbone"
+      ]
+    },
+    {
+      "id": "riviera-riverside-oak",
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Riverside Oak",
+      "collection": "Long Island",
+      "color": "Riverside Oak",
+      "tone": "diep warmbruin",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#806a57",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/riverside-oak",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-riverside-oak.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/riverside-oak.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "patterns": [
+        "plank",
+        "herringbone"
+      ]
+    },
+    {
+      "id": "riviera-montauk-dark",
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Montauk Dark",
+      "collection": "Long Island",
+      "color": "Montauk Dark",
+      "tone": "donker hout",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#615044",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/montauk-dark",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-montauk-dark.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/montauk-dark.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "patterns": [
+        "plank",
+        "herringbone"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Long Beach Sand · Longboard",
+      "collection": "Long Island",
+      "color": "Long Beach Sand",
+      "tone": "licht warm zand",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#baa184",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/long-beach-sand",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/long-beach-sand.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-long-beach-sand-plank",
+      "designName": "Long Beach Sand",
+      "pattern": "plank",
+      "patternLabel": "Longboard",
+      "dimensionsMetres": {
+        "length": 1.524,
+        "width": 0.23,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand-longboard.jpg",
+      "thumbnail": "assets/catalog/riviera/long-beach-sand-longboard.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand.jpg",
+          "local": "assets/catalog/riviera/long-beach-sand.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand-longboard.jpg",
+          "local": "assets/catalog/riviera/long-beach-sand-longboard.jpg",
+          "type": "angled-installed-floor-closeup-with-brand-plate"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Long Beach Sand · Visgraat",
+      "collection": "Long Island",
+      "color": "Long Beach Sand",
+      "tone": "licht warm zand",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#baa184",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/long-beach-sand",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/long-beach-sand.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-long-beach-sand-herringbone",
+      "designName": "Long Beach Sand",
+      "pattern": "herringbone",
+      "patternLabel": "Visgraat",
+      "dimensionsMetres": {
+        "length": 0.77,
+        "width": 0.154,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand-visgraat.jpg",
+      "thumbnail": "assets/catalog/riviera/long-beach-sand-visgraat.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand.jpg",
+          "local": "assets/catalog/riviera/long-beach-sand.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand-visgraat.jpg",
+          "local": "assets/catalog/riviera/long-beach-sand-visgraat.jpg",
+          "type": "angled-installed-floor-closeup"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Gibson Beach · Longboard",
+      "collection": "Long Island",
+      "color": "Gibson Beach",
+      "tone": "licht hout met warme gloed",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b69c80",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/gibson-beach",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-gibson-beach.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/gibson-beach.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-gibson-beach-plank",
+      "designName": "Gibson Beach",
+      "pattern": "plank",
+      "patternLabel": "Longboard",
+      "dimensionsMetres": {
+        "length": 1.524,
+        "width": 0.23,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-gibson-beach-longboard.jpg",
+      "thumbnail": "assets/catalog/riviera/gibson-beach-longboard.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-gibson-beach.jpg",
+          "local": "assets/catalog/riviera/gibson-beach.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-gibson-beach-longboard.jpg",
+          "local": "assets/catalog/riviera/gibson-beach-longboard.jpg",
+          "type": "angled-installed-floor-closeup-with-brand-plate"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Gibson Beach · Visgraat",
+      "collection": "Long Island",
+      "color": "Gibson Beach",
+      "tone": "licht hout met warme gloed",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b69c80",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/gibson-beach",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-gibson-beach.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/gibson-beach.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-gibson-beach-herringbone",
+      "designName": "Gibson Beach",
+      "pattern": "herringbone",
+      "patternLabel": "Visgraat",
+      "dimensionsMetres": {
+        "length": 0.77,
+        "width": 0.154,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-gibson-beach-visgraat.jpg",
+      "thumbnail": "assets/catalog/riviera/gibson-beach-visgraat.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-gibson-beach.jpg",
+          "local": "assets/catalog/riviera/gibson-beach.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-gibson-beach-visgraat.jpg",
+          "local": "assets/catalog/riviera/gibson-beach-visgraat.jpg",
+          "type": "angled-installed-floor-closeup"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Bayville Wood · Longboard",
+      "collection": "Long Island",
+      "color": "Bayville Wood",
+      "tone": "natuurlijk warm beige hout",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b8a084",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/bayville-wood",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-bayville-wood.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/bayville-wood.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-bayville-wood-plank",
+      "designName": "Bayville Wood",
+      "pattern": "plank",
+      "patternLabel": "Longboard",
+      "dimensionsMetres": {
+        "length": 1.524,
+        "width": 0.23,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-bayville-wood-longboard.jpg",
+      "thumbnail": "assets/catalog/riviera/bayville-wood-longboard.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-bayville-wood.jpg",
+          "local": "assets/catalog/riviera/bayville-wood.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-bayville-wood-longboard.jpg",
+          "local": "assets/catalog/riviera/bayville-wood-longboard.jpg",
+          "type": "angled-installed-floor-closeup-with-brand-plate"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Bayville Wood · Visgraat",
+      "collection": "Long Island",
+      "color": "Bayville Wood",
+      "tone": "natuurlijk warm beige hout",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b8a084",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/bayville-wood",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-bayville-wood.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/bayville-wood.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-bayville-wood-herringbone",
+      "designName": "Bayville Wood",
+      "pattern": "herringbone",
+      "patternLabel": "Visgraat",
+      "dimensionsMetres": {
+        "length": 0.77,
+        "width": 0.154,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-bayville-wood-visgraat.jpg",
+      "thumbnail": "assets/catalog/riviera/bayville-wood-visgraat.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-bayville-wood.jpg",
+          "local": "assets/catalog/riviera/bayville-wood.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-bayville-wood-visgraat.jpg",
+          "local": "assets/catalog/riviera/bayville-wood-visgraat.jpg",
+          "type": "angled-installed-floor-closeup"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Hempstead Grey · Longboard",
+      "collection": "Long Island",
+      "color": "Hempstead Grey",
+      "tone": "zacht warmgrijs",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b7aca0",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/hempstead-grey",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/hempstead-grey.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "sourceImageWarning": "De officiële close-up li-hempstead-grey.jpg is byte-identiek aan li-long-beach-sand-visgraat.jpg. De gepubliceerde afbeelding is ongewijzigd opgenomen; de fabrikant omschrijft Hempstead Grey als zacht warmgrijs.",
+      "id": "riviera-hempstead-grey-plank",
+      "designName": "Hempstead Grey",
+      "pattern": "plank",
+      "patternLabel": "Longboard",
+      "dimensionsMetres": {
+        "length": 1.524,
+        "width": 0.23,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey-longboard.jpg",
+      "thumbnail": "assets/catalog/riviera/hempstead-grey-longboard.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey.jpg",
+          "local": "assets/catalog/riviera/hempstead-grey.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey-longboard.jpg",
+          "local": "assets/catalog/riviera/hempstead-grey-longboard.jpg",
+          "type": "angled-installed-floor-closeup-with-brand-plate"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Hempstead Grey · Visgraat",
+      "collection": "Long Island",
+      "color": "Hempstead Grey",
+      "tone": "zacht warmgrijs",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#b7aca0",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/hempstead-grey",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/hempstead-grey.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "sourceImageWarning": "De officiële close-up li-hempstead-grey.jpg is byte-identiek aan li-long-beach-sand-visgraat.jpg. De gepubliceerde afbeelding is ongewijzigd opgenomen; de fabrikant omschrijft Hempstead Grey als zacht warmgrijs.",
+      "id": "riviera-hempstead-grey-herringbone",
+      "designName": "Hempstead Grey",
+      "pattern": "herringbone",
+      "patternLabel": "Visgraat",
+      "dimensionsMetres": {
+        "length": 0.77,
+        "width": 0.154,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey-visgraat.jpg",
+      "thumbnail": "assets/catalog/riviera/hempstead-grey-visgraat.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey.jpg",
+          "local": "assets/catalog/riviera/hempstead-grey.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey-visgraat.jpg",
+          "local": "assets/catalog/riviera/hempstead-grey-visgraat.jpg",
+          "type": "angled-installed-floor-closeup"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Riverside Oak · Longboard",
+      "collection": "Long Island",
+      "color": "Riverside Oak",
+      "tone": "diep warmbruin",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#806a57",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/riverside-oak",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-riverside-oak.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/riverside-oak.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-riverside-oak-plank",
+      "designName": "Riverside Oak",
+      "pattern": "plank",
+      "patternLabel": "Longboard",
+      "dimensionsMetres": {
+        "length": 1.524,
+        "width": 0.23,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-riverside-oak-longboard.jpg",
+      "thumbnail": "assets/catalog/riviera/riverside-oak-longboard.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-riverside-oak.jpg",
+          "local": "assets/catalog/riviera/riverside-oak.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-riverside-oak-longboard.jpg",
+          "local": "assets/catalog/riviera/riverside-oak-longboard.jpg",
+          "type": "angled-installed-floor-closeup-with-brand-plate"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Riverside Oak · Visgraat",
+      "collection": "Long Island",
+      "color": "Riverside Oak",
+      "tone": "diep warmbruin",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#806a57",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/riverside-oak",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-riverside-oak.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/riverside-oak.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-riverside-oak-herringbone",
+      "designName": "Riverside Oak",
+      "pattern": "herringbone",
+      "patternLabel": "Visgraat",
+      "dimensionsMetres": {
+        "length": 0.77,
+        "width": 0.154,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-riverside-oak-visgraat.jpg",
+      "thumbnail": "assets/catalog/riviera/riverside-oak-visgraat.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-riverside-oak.jpg",
+          "local": "assets/catalog/riviera/riverside-oak.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-riverside-oak-visgraat.jpg",
+          "local": "assets/catalog/riviera/riverside-oak-visgraat.jpg",
+          "type": "angled-installed-floor-closeup"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Montauk Dark · Longboard",
+      "collection": "Long Island",
+      "color": "Montauk Dark",
+      "tone": "donker hout",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#615044",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/montauk-dark",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-montauk-dark.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/montauk-dark.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-montauk-dark-plank",
+      "designName": "Montauk Dark",
+      "pattern": "plank",
+      "patternLabel": "Longboard",
+      "dimensionsMetres": {
+        "length": 1.524,
+        "width": 0.23,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-montauk-dark-longboard.jpg",
+      "thumbnail": "assets/catalog/riviera/montauk-dark-longboard.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-montauk-dark.jpg",
+          "local": "assets/catalog/riviera/montauk-dark.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-montauk-dark-longboard.jpg",
+          "local": "assets/catalog/riviera/montauk-dark-longboard.jpg",
+          "type": "angled-installed-floor-closeup-with-brand-plate"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    },
+    {
+      "brand": "Rivièra Maison",
+      "brandLine": "Rivièra Maison Flooring",
+      "name": "Montauk Dark · Visgraat",
+      "collection": "Long Island",
+      "color": "Montauk Dark",
+      "tone": "donker hout",
+      "toneBasis": "Digitale interpretatie van de officiële kleurtekst en productfoto; geen gekalibreerde kleurwaarde.",
+      "swatch": "#615044",
+      "material": "PVC",
+      "installation": "Dryback (te verlijmen)",
+      "officialURL": "https://www.rivieramaisonflooring.com/collecties/long-island/montauk-dark",
+      "materialReferenceImageURL": "https://www.rivieramaisonflooring.com/images/li-montauk-dark.jpg",
+      "materialReferenceImage": "assets/catalog/riviera/montauk-dark.jpg",
+      "materialReferenceImageType": "angled-installed-floor-closeup",
+      "mainMaterialImageURL": null,
+      "seamlessTextureAvailable": false,
+      "imageNotice": "Officiële detailfoto met perspectief en planknaden; geen naadloze PBR-textuur of losse-plankscan.",
+      "specificationURL": "https://www.rivieramaisonflooring.com/veilige-vloeren",
+      "manufacturerSKU": null,
+      "verifiedAt": "2026-11-17",
+      "id": "riviera-montauk-dark-herringbone",
+      "designName": "Montauk Dark",
+      "pattern": "herringbone",
+      "patternLabel": "Visgraat",
+      "dimensionsMetres": {
+        "length": 0.77,
+        "width": 0.154,
+        "thickness": 0.0025,
+        "wearLayer": 0.00055
+      },
+      "officialThumbnailURL": "https://www.rivieramaisonflooring.com/images/li-montauk-dark-visgraat.jpg",
+      "thumbnail": "assets/catalog/riviera/montauk-dark-visgraat.jpg",
+      "thumbnailType": "official-product-detail-photo",
+      "officialImages": [
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-montauk-dark.jpg",
+          "local": "assets/catalog/riviera/montauk-dark.jpg",
+          "type": "angled-installed-floor-closeup"
+        },
+        {
+          "url": "https://www.rivieramaisonflooring.com/images/li-montauk-dark-visgraat.jpg",
+          "local": "assets/catalog/riviera/montauk-dark-visgraat.jpg",
+          "type": "angled-installed-floor-closeup"
+        }
+      ],
+      "sourceFields": {
+        "nameColorMaterialPatterns": "officialURL",
+        "installationDimensions": "specificationURL",
+        "images": "officialURL",
+        "swatch": "approximate screen interpretation, not manufacturer specification"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/catalog/riviera/long-beach-sand.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand.jpg",
+      "bytes": 96918,
+      "width": 1024,
+      "height": 675,
+      "sha256": "6b4827ff0cb43912dbdc3a82810716b296597c6436ba669851c7d9a2ee73ea16",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/long-beach-sand-longboard.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand-longboard.jpg",
+      "bytes": 284428,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "4fc6126c5df49e71ba83ce98eddb08891396a6beba49af544bd7df80204bfaa1",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/long-beach-sand-visgraat.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-long-beach-sand-visgraat.jpg",
+      "bytes": 221625,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "34fe1f5313a0e8ecf8cbb67c3730e2fb79161457bfc6ed545410ffcb7e829e13",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/gibson-beach.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-gibson-beach.jpg",
+      "bytes": 116027,
+      "width": 1024,
+      "height": 683,
+      "sha256": "3540bc1cf724fd83e04112efecf420326d5804831a61190f6829ab08da5a0173",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/gibson-beach-longboard.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-gibson-beach-longboard.jpg",
+      "bytes": 343582,
+      "width": 1600,
+      "height": 1067,
+      "sha256": "91c9794476098640d8d09c4a7de27520d91fae8d2be6cbd1ffc25d16168c8827",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/gibson-beach-visgraat.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-gibson-beach-visgraat.jpg",
+      "bytes": 314179,
+      "width": 1600,
+      "height": 1067,
+      "sha256": "7d0d6643fff4cc17c70c2b9a18d540e06f6380310151b839483104a202905e59",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/bayville-wood.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-bayville-wood.jpg",
+      "bytes": 97457,
+      "width": 1024,
+      "height": 675,
+      "sha256": "a088b2f18e3051f570aa5430bdb8c6bddcf39e9b4448f1f302b7566ed88a477c",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/bayville-wood-longboard.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-bayville-wood-longboard.jpg",
+      "bytes": 277309,
+      "width": 1600,
+      "height": 1055,
+      "sha256": "0946d116fa6cc1ecfd28b7ebf697e0dbd39edea97a12c0097e52cfd133db36de",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/bayville-wood-visgraat.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-bayville-wood-visgraat.jpg",
+      "bytes": 248924,
+      "width": 1600,
+      "height": 1055,
+      "sha256": "02841a14a33d8b2ae98114aa92d39808abef420b8087c3e617ee433d0adda147",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/hempstead-grey.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey.jpg",
+      "bytes": 221625,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "34fe1f5313a0e8ecf8cbb67c3730e2fb79161457bfc6ed545410ffcb7e829e13",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/hempstead-grey-longboard.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey-longboard.jpg",
+      "bytes": 239718,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "71d2bdac5557b1fe8dd0f517c18ac3e1eef8974b2723fa161539274d1efdbde6",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/hempstead-grey-visgraat.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-hempstead-grey-visgraat.jpg",
+      "bytes": 253379,
+      "width": 1600,
+      "height": 1055,
+      "sha256": "702697df4f75082f0e67296f23f332c8dbdcbb55cec0abf0dd3bd1432c8878d9",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/riverside-oak.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-riverside-oak.jpg",
+      "bytes": 124738,
+      "width": 1024,
+      "height": 675,
+      "sha256": "ea07139e0b0d445d880f6c80aedd771dfc01855bed90e97273789d88120f684f",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/riverside-oak-longboard.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-riverside-oak-longboard.jpg",
+      "bytes": 314982,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "a040cedc579ea4e59b6c117bd62852f3397a2fd9d66c78abbf064a3bdd57c799",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/riverside-oak-visgraat.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-riverside-oak-visgraat.jpg",
+      "bytes": 313955,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "54f02711f04b408fbe13dc93bfab1b452c90ca7b4a1bbd636cc00363567daa8c",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/montauk-dark.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-montauk-dark.jpg",
+      "bytes": 120589,
+      "width": 1024,
+      "height": 675,
+      "sha256": "8a74d9a18afb17463f88d0e83e01c22523e2dde5d6a89568a86c50c0abd74046",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/montauk-dark-longboard.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-montauk-dark-longboard.jpg",
+      "bytes": 303408,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "80b985eebfedf8a8734ca9e9327338a19822808e1a11365c1c81becfe04cfc12",
+      "modified": false
+    },
+    {
+      "file": "assets/catalog/riviera/montauk-dark-visgraat.jpg",
+      "url": "https://www.rivieramaisonflooring.com/images/li-montauk-dark-visgraat.jpg",
+      "bytes": 303683,
+      "width": 1600,
+      "height": 1054,
+      "sha256": "5fd2209968ff8eea57032f5f356bf652b8bda0f74812ec90018092c9c1b2423a",
+      "modified": false
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-17",
+  "sources": [
+    "B9097 sale elevations",
+    "signed9648 option drawing",
+    "BPD Type-E/97 frame geometry",
+    "ViSoft bathroom retained"
+  ],
+  "ground": {
+    "frontFixedWindows": [
+      [
+        0.525,
+        2.225
+      ],
+      [
+        3.235,
+        4.935
+      ]
+    ],
+    "sideFixedWindow": [
+      2.43,
+      3.464
+    ],
+    "frameBottom": 0.02,
+    "frameTop": 2.546,
+    "rearSliding": {
+      "from": 0.55,
+      "to": 4.62,
+      "bottom": 0,
+      "top": 2.56
+    },
+    "annexGardenDoor": {
+      "from": 6.62,
+      "to": 8.32,
+      "bottom": 0,
+      "top": 2.56,
+      "mullion": 7.27
+    }
+  },
+  "first": {
+    "frameBottom": 0.366,
+    "frameTop": 2.546,
+    "front": [
+      [
+        0.525,
+        1.225
+      ],
+      [
+        3.235,
+        4.935
+      ]
+    ],
+    "rear": [
+      [
+        0.51,
+        2.21
+      ],
+      [
+        3.67,
+        4.37
+      ]
+    ]
+  },
+  "atticSide": {
+    "localZ": [
+      4.886,
+      5.586
+    ],
+    "frameBottom": 0.366,
+    "frameTop": 2.546
+  },
+  "note": "Metres in local plan coordinates. Interior frame interpretations from building geometry, not fabrication or surveyed site dimensions."
+}

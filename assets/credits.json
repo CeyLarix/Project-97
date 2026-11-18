@@ -1,0 +1,352 @@
+{
+  "models": [
+    {
+      "path": "assets/models/haven-sofa.glb",
+      "title": "HAVEN 224 \u00b7 Oatmeal Two-Seat Sofa",
+      "creator": "Innerscene",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/haven-224-oatmeal-two-seat-sofa-40262c27",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "bytes": 5498324,
+      "bounds": {
+        "min": [
+          -1.1375,
+          0.005,
+          -0.4575
+        ],
+        "max": [
+          1.1375,
+          0.93399,
+          0.4675
+        ],
+        "size": [
+          2.275,
+          0.92899,
+          0.925
+        ]
+      },
+      "orientation": {
+        "up": "+Y",
+        "front": "+Z",
+        "units": "metres"
+      },
+      "materials": [
+        "Linen cord | warm flax",
+        "Charcoal felt | foot glides and underside",
+        "Oatmeal | interlaced natural linen",
+        "Smoked walnut | satin tapered feet"
+      ],
+      "embedded": true,
+      "requiredExtensions": []
+    },
+    {
+      "path": "assets/models/curved-sofa.glb",
+      "title": "Crescent \u00b7 Curved Boucle Sofa",
+      "creator": "Innerscene",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/crescent-curved-boucle-sofa-90c9ad84",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "bytes": 2029128,
+      "bounds": {
+        "min": [
+          -1.32181,
+          0.0,
+          -0.59961
+        ],
+        "max": [
+          1.32181,
+          0.92,
+          0.55012
+        ],
+        "size": [
+          2.64361,
+          0.92,
+          1.14973
+        ]
+      },
+      "orientation": {
+        "up": "+Y",
+        "front": "+Z",
+        "units": "metres"
+      },
+      "materials": [
+        "Textile | original woven or leather PBR",
+        "Charcoal | polymer, rubber and glides"
+      ],
+      "embedded": true,
+      "requiredExtensions": []
+    },
+    {
+      "path": "assets/models/oak-bed.glb",
+      "title": "NEST 160 \u00b7 Storage Bed",
+      "creator": "Innerscene",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/nest-160-storage-bed-4253809d",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "bytes": 4358300,
+      "bounds": {
+        "min": [
+          -0.944,
+          0.0,
+          -1.1155
+        ],
+        "max": [
+          0.944,
+          1.21,
+          1.085
+        ],
+        "size": [
+          1.888,
+          1.21,
+          2.2005
+        ]
+      },
+      "orientation": {
+        "up": "+Y",
+        "front": "+Z",
+        "units": "metres"
+      },
+      "materials": [
+        "Ivory | woven bedding",
+        "Flax | woven upholstery",
+        "Oak | satin open-pore finish",
+        "Sage_Linen | tactile finish",
+        "Elastomer | pads and recesses",
+        "Graphite | powder-coated steel",
+        "Bronze | satin hardware"
+      ],
+      "embedded": true,
+      "requiredExtensions": []
+    },
+    {
+      "path": "assets/models/queen-bed.glb",
+      "title": "Queen bed with bedding",
+      "creator": "Innerscene",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/queen-bed-with-bedding-original-interior-furnishing-ea3bae95",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "bytes": 765512,
+      "bounds": {
+        "min": [
+          -0.85,
+          0.0,
+          -1.1125
+        ],
+        "max": [
+          0.85,
+          1.27,
+          1.0775
+        ],
+        "size": [
+          1.7,
+          1.27,
+          2.19
+        ]
+      },
+      "orientation": {
+        "up": "+Y",
+        "front": "+Z",
+        "units": "metres"
+      },
+      "materials": [
+        "Original walnut grain",
+        "Original teal upholstery",
+        "Original cream upholstery",
+        "Original linen upholstery",
+        "Original blue_fabric upholstery",
+        "Original oak grain"
+      ],
+      "embedded": true,
+      "requiredExtensions": []
+    },
+    {
+      "path": "assets/models/modern-armchair.glb",
+      "title": "Modern Arm Chair 01",
+      "creator": "Poly Haven",
+      "source": "https://polyhaven.com/a/modern_arm_chair_01",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "bytes": 2696208,
+      "bounds": {
+        "min": [
+          -0.40681,
+          0.00038,
+          -0.57545
+        ],
+        "max": [
+          0.41354,
+          1.02323,
+          0.41111
+        ],
+        "size": [
+          0.82034,
+          1.02285,
+          0.98656
+        ]
+      },
+      "orientation": {
+        "up": "+Y",
+        "front": "+Z",
+        "units": "metres"
+      },
+      "materials": [
+        "modern_arm_chair_01_legs",
+        "modern_arm_chair_01_pillow"
+      ],
+      "embedded": true,
+      "requiredExtensions": []
+    },
+    {
+      "path": "assets/models/dining-chair.glb",
+      "title": "Dining Chair 02",
+      "creator": "Poly Haven",
+      "source": "https://polyhaven.com/a/dining_chair_02",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "bytes": 920096,
+      "bounds": {
+        "min": [
+          -0.21679,
+          0.00129,
+          -0.33102
+        ],
+        "max": [
+          0.21679,
+          0.97466,
+          0.2454
+        ],
+        "size": [
+          0.43357,
+          0.97338,
+          0.57642
+        ]
+      },
+      "orientation": {
+        "up": "+Y",
+        "front": "+Z",
+        "units": "metres"
+      },
+      "materials": [
+        "dining_chair_02"
+      ],
+      "embedded": true,
+      "requiredExtensions": []
+    }
+  ],
+  "textures": [
+    {
+      "path": "assets/pbr/plaster-color.jpg",
+      "asset": "white_plaster_02",
+      "title": "White Plaster 02",
+      "creator": "Rob Tuytel",
+      "source": "https://polyhaven.com/a/white_plaster_02",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 527219,
+      "tileSizeMetres": 1.5,
+      "usage": "sRGB color; tint with warm greige"
+    },
+    {
+      "path": "assets/pbr/plaster-normal.jpg",
+      "asset": "white_plaster_02",
+      "title": "White Plaster 02",
+      "creator": "Rob Tuytel",
+      "source": "https://polyhaven.com/a/white_plaster_02",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 652310,
+      "tileSizeMetres": 1.5,
+      "usage": "OpenGL tangent normal; subtle normalScale around0.12"
+    },
+    {
+      "path": "assets/pbr/plaster-roughness.jpg",
+      "asset": "white_plaster_02",
+      "title": "White Plaster 02",
+      "creator": "Rob Tuytel",
+      "source": "https://polyhaven.com/a/white_plaster_02",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 295900,
+      "tileSizeMetres": 1.5,
+      "usage": "linear roughness"
+    },
+    {
+      "path": "assets/pbr/marble-color.jpg",
+      "asset": "marble_01",
+      "title": "Marble 01",
+      "creator": "Rob Tuytel",
+      "source": "https://polyhaven.com/a/marble_01",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 305029,
+      "tileSizeMetres": null,
+      "usage": "sRGB light stone color"
+    },
+    {
+      "path": "assets/pbr/marble-normal.jpg",
+      "asset": "marble_01",
+      "title": "Marble 01",
+      "creator": "Rob Tuytel",
+      "source": "https://polyhaven.com/a/marble_01",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 110230,
+      "tileSizeMetres": null,
+      "usage": "OpenGL tangent normal"
+    },
+    {
+      "path": "assets/pbr/marble-roughness.jpg",
+      "asset": "marble_01",
+      "title": "Marble 01",
+      "creator": "Rob Tuytel",
+      "source": "https://polyhaven.com/a/marble_01",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 91848,
+      "tileSizeMetres": null,
+      "usage": "linear roughness"
+    },
+    {
+      "path": "assets/pbr/linen-normal.jpg",
+      "asset": "rough_linen",
+      "title": "Rough Linen",
+      "creator": "colormass; Rico Cilliers",
+      "source": "https://polyhaven.com/a/rough_linen",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 916843,
+      "tileSizeMetres": null,
+      "usage": "OpenGL tangent normal, neutral fabric texture; original blue albedo deliberately omitted"
+    },
+    {
+      "path": "assets/pbr/linen-roughness.jpg",
+      "asset": "rough_linen",
+      "title": "Rough Linen",
+      "creator": "colormass; Rico Cilliers",
+      "source": "https://polyhaven.com/a/rough_linen",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1083725,
+      "tileSizeMetres": null,
+      "usage": "linear roughness"
+    },
+    {
+      "path": "assets/pbr/lebombo-1k.hdr",
+      "asset": "lebombo",
+      "title": "Lebombo",
+      "creator": "Greg Zaal",
+      "source": "https://polyhaven.com/a/lebombo",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1476953,
+      "tileSizeMetres": null,
+      "usage": "1K neutral indoor daylight HDR; use as lighting environment, not required as scene background"
+    }
+  ],
+  "totalBytes": 21727625,
+  "notes": [
+    "All selected external models and textures are CC0, so attribution is optional; sources retained for provenance.",
+    "Poly Haven glTF models were repackaged into self-contained GLB with unchanged geometry and textures.",
+    "No proprietary interior design software or protected site source code was copied."
+  ]
+}

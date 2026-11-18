@@ -1,0 +1,14 @@
+{
+  "title": "25-5010 bnr. 97 O-1",
+  "source": "https://visoft360.com/en/projectmodel3d/viewer/PYCfEWM",
+  "download": "https://visoft360.com/en/download/Download3DModel?sharedElementId=856720",
+  "sourceSHA256": "4130bedd49a68a61147ce0b9472eba4a4a5ea2644d845bd1546f7c3bf7c3fad5",
+  "sourceBytes": 38487108,
+  "optimizedBytes": 6969228,
+  "operation": "Geometry and material assignments unchanged. Embedded textures limited to 512px for browser GPU memory.",
+  "transform": {
+    "xOffset": 2.3,
+    "zOffset": 9.9,
+    "zScale": -1
+  }
+}
