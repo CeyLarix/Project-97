@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import * as THREE from '../dist/assets/three.module.js';
+import {furnishKitchen} from '../dist/kitchen.js';
+import {orientGroup,planWorldX} from '../dist/orientation.js';
+const root=orientGroup(new THREE.Group()),floor=new THREE.Group();root.add(floor);
+const kitchen=furnishKitchen(floor);kitchen.group.position.z=.15;root.updateMatrixWorld(true);
+const camera=new THREE.PerspectiveCamera(64,1,.06,100);
+camera.position.set(planWorldX(.65),1.65,10.675);camera.lookAt(planWorldX(4.85),1.2,10.675);camera.updateMatrixWorld();
+const project=object=>object.getWorldPosition(new THREE.Vector3()).project(camera).x;
+const left=kitchen.features['oven-left'],right=kitchen.features['oven-right'],sink=kitchen.features.sinkNiche,wine=kitchen.features.wineGlass;
+assert.ok(project(left)<project(right)&&project(right)<project(sink),'reference: both ovens belong left of sink, in their original order');
+const islandMid=new THREE.Object3D();islandMid.position.set(3.245,.925,10.525);const island=kitchen.group.getObjectByName('reference-island');island.add(islandMid);root.updateMatrixWorld(true);
+assert.ok(project(wine)<project(islandMid),'reference: wine fridge belongs in the front-left bay');
+assert.ok(Math.abs(left.getWorldPosition(new THREE.Vector3()).x-planWorldX(4.718))<1e-9,'cabinetry stays against original wall');
+assert.equal(kitchen.group.scale.x,1,'no second house X reflection');
+// Work in the parent plan frame, independent of the street handedness.
+const boxOf=object=>{const b=new THREE.Box3();object.traverse(o=>{if(o.isMesh){if(o.isInstancedMesh)o.computeBoundingBox();else o.geometry.computeBoundingBox();const g=(o.isInstancedMesh?o.boundingBox:o.geometry.boundingBox).clone().applyMatrix4(new THREE.Matrix4().copy(floor.matrixWorld).invert().multiply(o.matrixWorld));b.union(g);}});return b;};
+const cab=boxOf(kitchen.group.getObjectByName('reference-cabinetry')),isl=boxOf(island);
+assert.ok(Math.abs(cab.min.z-8.5)<.012&&Math.abs(cab.max.z-12.15)<.012,'cabinet depth footprint preserved');
+assert.ok(Math.abs(isl.min.z-9.42)<.012&&Math.abs(isl.max.z-11.93)<.012,'island depth footprint preserved');
+assert.deepEqual(kitchen.obstacles,[{minX:4.7,minZ:8.35,maxX:5.4,maxZ:12},{minX:2.65,minZ:9.27,maxX:3.84,maxZ:11.78}]);
+assert.ok(kitchen.lights.filter(l=>l.userData.kitchenLED).every(l=>l.parent.name==='reference-cabinetry'),'niche lighting follows cabinets');
+console.log('Kitchen orientation passed: ovens left, wine fridge left, wall/island footprints and collision bounds preserved.');

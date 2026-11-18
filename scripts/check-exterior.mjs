@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import * as THREE from '../dist/assets/three.module.js';
+import {GLTFLoader} from '../dist/assets/addons/loaders/GLTFLoader.js';
+import {createExterior} from '../dist/exterior.js';
+globalThis.self=globalThis;
+// Geometry/material lifecycle validation in Node; this does not emulate GPU image rendering.
+globalThis.createImageBitmap=async()=>({width:1,height:1,close(){}});
+const bytes=fs.readFileSync(new URL('../dist/assets/exterior/woning97.glb',import.meta.url));
+const gltf=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+const meta=JSON.parse(fs.readFileSync(new URL('../dist/assets/exterior/source.json',import.meta.url)));
+let meshes=0,triangles=0,embeddedMaps=new Set();const names=new Set(),classes=new Set();
+gltf.scene.traverse(o=>{if(!o.isMesh)return;meshes++;triangles+=o.geometry.attributes.position.count/3;classes.add(o.userData.ifcClass);for(const a of Object.values(o.geometry.attributes))assert.ok(a.array.every(Number.isFinite),'non-finite '+o.name);for(const m of Array.isArray(o.material)?o.material:[o.material]){names.add(m.name);if(m.map)embeddedMaps.add(m.map);}});
+assert.equal(meshes,meta.meshCount);assert.equal(triangles,meta.triangleCount);assert.ok(!classes.has('IfcOpeningElement')&&!classes.has('IfcSpace'));
+for(const n of ['baksteen','rollaag','dakpannen','plat-dak'])assert.ok(names.has(n),'source finish missing '+n);
+assert.equal(embeddedMaps.size,4);
+const bounds=new THREE.Box3().setFromObject(gltf.scene);assert.ok(bounds.max.y>11.7&&bounds.max.y<11.8,'original roof ridge');assert.ok(bounds.min.z<-.4&&bounds.max.z>13.9,'full front and rear extensions');assert.ok(bounds.max.x>9,'annex envelope');
+let calls=0;const envelope=createExterior([],{loadScene:async()=>{calls++;return{scene:gltf.scene.clone(true)}}});
+assert.equal(envelope.userData.state,'idle');const p=envelope.userData.load();assert.equal(envelope.userData.load(),p);await p;assert.equal(calls,1);assert.equal(envelope.userData.state,'ready');await envelope.userData.load();assert.equal(calls,1);assert.equal(envelope.children.length,1);assert.equal(envelope.scale.x,1,'orientation is applied by houseRoot, not a second time');
+envelope.traverse(o=>{if(o.isMesh){for(const m of Array.isArray(o.material)?o.material:[o.material]){assert.equal(m.userData.fixedExterior,true);assert.ok(!m.userData.role);}}});
+let attempts=0;const retry=createExterior([],{loadScene:async()=>{if(++attempts===1)throw Error('offline');return{scene:new THREE.Group()}}});await assert.rejects(retry.userData.load(),/offline/);assert.equal(retry.userData.state,'error');await retry.userData.load();assert.equal(retry.userData.state,'ready');assert.equal(attempts,2);
+console.log('Exterior passed:',{meshes,triangles,sourceTextureMaps:embeddedMaps.size,roofRidge:bounds.max.y,loaderReused:true,retry:true});

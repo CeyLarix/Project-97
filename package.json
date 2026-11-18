@@ -1,0 +1,10 @@
+{
+  "name": "mijn-huis-97",
+  "private": true,
+  "type": "module",
+  "description": "All-floor 3D interior studio with four styles",
+  "scripts": {
+    "check": "node --check dist/app.js && node --check dist/architecture.js && node --check dist/models.js && node --check dist/interiors.js && node --check dist/furniture.js && node --check dist/materials.js && node --check dist/plans.js && node --check dist/styles.js && node --check dist/outside.js && node --check dist/floor.js && node --check dist/kitchen.js && node --check dist/finishes.js && node --check dist/floors.js && node --check dist/ios-controls.js && node --check dist/catalog.js && node --check dist/exterior.js && node --check dist/orientation.js && node --check dist/plot97.js && node --check dist/forecourt.js && node --check dist/neighborhood.js && node --check dist/neighborhood-data.js",
+    "catalog": "python3 scripts/build-floor-catalog.py"
+  }
+}

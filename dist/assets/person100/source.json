@@ -1,0 +1,34 @@
+{
+  "source": "User-provided persoon_met_pakket.glb",
+  "file": "persoon_met_pakket.glb",
+  "sha256": "eb91e06bb027babbf4070cb3d9d665228d05698dc9de5e0a3e866e510ed43584",
+  "bytes": 407920,
+  "units": "meters",
+  "coordinateSystem": "Y-up, Z-forward",
+  "originalBounds": {
+    "min": [
+      -0.47600001096725464,
+      0.004000000189989805,
+      -0.19622211158275604
+    ],
+    "max": [
+      0.3499999940395355,
+      1.819000005722046,
+      0.48100000619888306
+    ]
+  },
+  "humanHeightMetres": 1.815000005532056,
+  "scale": 1,
+  "meshCount": 66,
+  "materialCount": 17,
+  "embeddedImages": 2,
+  "triangles": 20184,
+  "placement": {
+    "planX": 35.8539,
+    "planZ": 5.0963,
+    "feetY": 0.008,
+    "rotationYRadians": 3.141592653589793
+  },
+  "preservation": "Original GLB bytes, all PBR materials, UVs and two embedded PNG images retained. Local X reflection cancels the houseRoot street reflection so the face and parcel print remain unmirrored.",
+  "navigation": "Compact body disk and real parcel bounds; free 0.9 m radius walking loop around the person, with doorway/portal clearance checked."
+}
