@@ -15,11 +15,11 @@ export function loadYouTubeAPI(){
 // Prepare a paused player before the music click, so that click can start it directly.
 export function setupTarkanPlayer({button,futbolButton=null,panel,mount,closeButton,beforeOpen=()=>{},getInitialTV=()=> 'living',onError=()=>{},loadAPI=loadYouTubeAPI}){
   let selected='living',content='music',loaded='music',api=null,ready=false,wanted=false,playing=false,preparing=null;
-  const videos={music:'cpp69ghR1IM',futbol:'c4dTDowd1YA'};
+  const videos={music:'cpp69ghR1IM',futbol:'c4dTDowd1YA',doorbell:'4gA5iaZ11lU'};
   const buttons={music:button,futbol:futbolButton};
   const labels={music:'♫ Muziek',futbol:'⚽ Futbol'};
-  function syncButtons(){for(const [id,b] of Object.entries(buttons)){if(!b)continue;const active=wanted&&id===content;b.textContent=labels[id];b.title=active?'Afspelen stoppen':(id==='music'?'Muziek':'Futbol')+' afspelen op de tv';b.setAttribute('aria-expanded',String(active));b.classList.toggle('active',active);}}
-  function retryLabel(){const b=buttons[content];b.textContent='▶ '+(content==='music'?'Muziek':'Futbol');b.title='Klik hier om afspelen te starten';}
+  function syncButtons(){for(const [id,b] of Object.entries(buttons)){if(!b)continue;const active=wanted&&(id===content||(id==='music'&&content==='doorbell'));b.textContent=labels[id];b.title=active?'Afspelen stoppen':(id==='music'?'Muziek':'Futbol')+' afspelen op de tv';b.setAttribute('aria-expanded',String(active));b.classList.toggle('active',active);}}
+  function retryLabel(){const b=buttons[content]||button;b.textContent='▶ '+(content==='music'?'Muziek':'Futbol');b.title='Klik hier om afspelen te starten';}
   const choice=panel.querySelector('#music-tv');
   function select(id){selected=['living','kitchen','attic','mancave'].includes(id)?id:'living';if(choice)choice.value=selected;}
   if(choice)choice.onchange=()=>select(choice.value);
@@ -58,13 +58,13 @@ export function setupTarkanPlayer({button,futbolButton=null,panel,mount,closeBut
     syncButtons();
   }
   function choose(id){const same=id===content;if(!same){content=id;playing=false;}setOpen(!same||!wanted||!playing);}
-  button.onclick=()=>choose('music');
+  button.onclick=()=>{if(content==='doorbell'&&wanted&&!playing)setOpen(true);else choose('music');};
   if(futbolButton)futbolButton.onclick=()=>choose('futbol');
-  closeButton.onclick=()=>{setOpen(false);buttons[content].focus();};
-  panel.addEventListener('keydown',event=>{if(event.key==='Escape'){event.stopPropagation();setOpen(false);buttons[content].focus();}});
+  closeButton.onclick=()=>{setOpen(false);(buttons[content]||button).focus();};
+  panel.addEventListener('keydown',event=>{if(event.key==='Escape'){event.stopPropagation();setOpen(false);(buttons[content]||button).focus();}});
   for(const type of ['keydown','keyup','pointerdown','touchstart','wheel'])panel.addEventListener(type,event=>event.stopPropagation());
   prepare();
-  return {setOpen,get open(){return wanted},get selected(){return selected},get playing(){return playing}};
+  return {setOpen,setVolume(value){if(ready)api.setVolume(Math.max(0,Math.min(100,value)));},playDoorbell(){content='doorbell';playing=false;setOpen(true);},get content(){return content},get open(){return wanted},get selected(){return selected},get playing(){return playing}};
 }
 
 // Project an embedded player onto the physical TV plane without copying video data.

@@ -22,7 +22,7 @@ export function setupDesktopMenu({doc=document,view,onOpen=()=>{},nav=navigator}
  settings.append(make('h2','desktop-drawer-title','Jouw weergave'),doc.querySelector('.view-tools'),doc.querySelector('.experience-controls'),doc.querySelector('.style-dock'),doc.querySelector('.scene-links'));
  view.append(bar,zoom,rooms,settings);close();
  rooms.addEventListener('click',e=>{if(e.target.closest('#rooms button'))close();});
- settings.addEventListener('click',e=>{if(e.target.closest('#style-toggle,#materials,#source,#gallery'))close();});
+ settings.addEventListener('click',e=>{if(e.target.closest('#style-toggle,#materials,#source,#gallery,#sofabed-toggle'))close();});
  view.addEventListener('pointerdown',e=>{if(!e.target.closest('.desktop-toolbar,.desktop-drawer,.style-panel,.tarkan-panel,.tv-surface-player'))close();});
  doc.addEventListener('keydown',e=>{if(e.key==='Escape'){close();view.classList.remove('styles-open');doc.querySelector('#style-panel')?.classList.remove('open');doc.querySelector('#style-toggle')?.setAttribute('aria-expanded','false');}});
  return {close};

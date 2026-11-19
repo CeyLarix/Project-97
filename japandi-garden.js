@@ -1,3 +1,4 @@
+import {addGardenShed} from './garden-shed.js';
 import * as THREE from './assets/three.module.js';
 import {PLOT97} from './plot97.js';
 export function createJapandiGarden(){
@@ -17,13 +18,14 @@ export function createJapandiGarden(){
  // Horizontal warm timber privacy screens; no planting or trees.
  for(let y=.13;y<1.82;y+=.12){box(b-a,.105,.035,(a+b)/2,y,d-.025,oak);for(const x of[a+.025,b-.025])box(.035,.105,d-c,x,y,(c+d)/2,oak);}
  for(const x of[a+.055,b-.055])for(let z=c+.1;z<d;z+=1.8)box(.07,1.85,.07,x,.925,z,dark);
- // Attached veranda with a light-filtering roof and warm timber rafters.
+ // Cover only the outdoor kitchen and dining area; the shed has its own roof.
+ const canopyLeft=3.08,canopyRight=10.75,canopyWidth=canopyRight-canopyLeft,canopyCenter=(canopyLeft+canopyRight)/2;
  const roof=mat('#e3ddd0',.35,{transparent:true,opacity:.64,side:THREE.DoubleSide,depthWrite:false});
- box(10.5,.035,3.05,5.5,2.81,19.6,roof,'veranda-roof');
- for(const z of[18.1,21.1])box(10.5,.18,.14,5.5,2.70,z,oak,'veranda-beam');
- for(let x=.4;x<10.7;x+=.64)box(.07,.12,3.05,x,2.71,19.6,oak,'veranda-rafter');
- for(const x of[.42,5.50,10.58])for(const z of[18.25,20.95]){box(.13,2.65,.13,x,1.325,z,oak,'veranda-post');block(x,z,.15,.15);}
- const glow=mat('#ffe7be',.5,{emissive:'#ffce8e',emissiveIntensity:.8});box(10.1,.014,.025,5.5,2.59,21.06,glow,'veranda-warm-led');
+ box(canopyWidth,.035,3.05,canopyCenter,2.81,19.6,roof,'veranda-roof');
+ for(const z of[18.1,21.1])box(canopyWidth,.18,.14,canopyCenter,2.70,z,oak,'veranda-beam');
+ for(let x=3.18;x<10.7;x+=.64)box(.07,.12,3.05,x,2.71,19.6,oak,'veranda-rafter');
+ for(const x of[3.20,6.90,10.58])for(const z of[18.25,20.95]){box(.13,2.65,.13,x,1.325,z,oak,'veranda-post');block(x,z,.15,.15);}
+ const glow=mat('#ffe7be',.5,{emissive:'#ffce8e',emissiveIntensity:.8});box(canopyWidth-.4,.014,.025,canopyCenter,2.59,21.06,glow,'veranda-warm-led');
  // Low teak lounge with generous woven cushions, facing into the garden.
  const sx=2.0,sz=15.3;
  box(2.75,.15,.9,sx,.29,sz,oak,'garden-lounge-sofa');box(2.75,.47,.10,sx,.62,sz-.40,oak);
@@ -34,8 +36,10 @@ export function createJapandiGarden(){
  // Outdoor dining set; the middle garden passage stays open.
  box(1.85,.065,.9,8.20,.77,19.65,oak,'garden-dining-table');for(const x of[7.43,8.97])for(const z of[19.33,19.97])box(.055,.72,.055,x,.38,z,dark);block(8.20,19.65,1.9,.95);
  for(const[x,z,angle]of[[7.7,18.86,0],[8.7,18.86,0],[7.7,20.44,Math.PI],[8.7,20.44,Math.PI]]){const chair=new THREE.Group();chair.position.set(x,0,z);chair.rotation.y=angle;group.add(chair);const part=(w,h,d,xx,y,zz,m)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(xx,y,zz);o.castShadow=true;chair.add(o);};part(.5,.09,.5,0,.45,0,fabric);part(.5,.42,.055,0,.69,-.24,oak);for(const xx of[-.19,.19])for(const zz of[-.19,.19])part(.035,.43,.035,xx,.22,zz,oak);block(x,z,.54,.56);}
- for(const[x,z]of[[4.8,20.6],[10.45,17.9]]){box(.16,.36,.16,x,.18,z,dark,'garden-lantern');box(.11,.23,.11,x,.22,z,glow);}
- // Covered outdoor kitchen in the rear-left corner of the retained garden.
+ for(const[x,z]of[[3.35,18.65],[10.45,17.9]]){box(.16,.36,.16,x,.18,z,dark,'garden-lantern');box(.11,.23,.11,x,.22,z,glow);}
+ const shed=addGardenShed(group);obstacles.push(...shed.obstacles);
+ // Outdoor kitchen in the centre, between the rear-left shed and right dining set.
+ const kitchenStart=new Set(group.children),kitchenObstacleStart=obstacles.length;
  const kitchenDark=mat('#40443e',.65,{metalness:.35}),metal=mat('#a2aaa5',.3,{metalness:.8}),worktop=mat('#d5cdbf',.6);
  box(3.10,.80,.64,2.2,.43,20.60,kitchenDark,'outdoor-kitchen-base');block(2.2,20.60,3.14,.68);
  box(3.20,.065,.72,2.2,.865,20.60,worktop,'outdoor-kitchen-worktop');
@@ -50,5 +54,9 @@ export function createJapandiGarden(){
  const tap=new THREE.Mesh(new THREE.TubeGeometry(tapCurve,24,.011,8,false),metal);tap.name='outdoor-kitchen-tap';group.add(tap);
  box(.52,.67,.032,3.35,.45,20.235,kitchenDark,'outdoor-kitchen-fridge');box(.022,.38,.025,3.54,.50,20.20,metal,'outdoor-fridge-handle');
  box(2.95,.012,.025,2.2,2.61,20.94,glow,'outdoor-kitchen-warm-led');
+ const kitchenGroup=new THREE.Group();kitchenGroup.name='outdoor-kitchen-beside-shed';
+ for(const child of [...group.children])if(!kitchenStart.has(child)){group.remove(child);kitchenGroup.add(child);}
+ kitchenGroup.position.set(2.55,0,-.18);group.add(kitchenGroup);
+ for(let i=kitchenObstacleStart;i<obstacles.length;i++){const o=obstacles[i];o.minX+=2.55;o.maxX+=2.55;o.minZ-=.18;o.maxZ-=.18;}
  group.userData={obstacles,style:'Japandi',fullyPaved:true,planting:false};return group;
 }

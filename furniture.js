@@ -1,3 +1,8 @@
+import {addPassageStorage} from './passage-storage.js';
+import {addTVSideSlats} from './tv-side-slats.js';
+import {createJapandiCorner,addSaruleChair,addRoweMat,addIslandStools,addEketSideboard} from './japandi-seating.js';
+import {addPassageShelf} from './passage-shelf.js';
+import {addNorvetaOlive} from './requested-decor.js';
 import {addKerPinkArt} from './ker-art.js';
 import {addYoriRug} from './yori-rug.js';
 import {addLivingFlowerLamp} from './flower-lamp.js';
@@ -78,17 +83,10 @@ export function furnish(scene, shared = {}, options = {}) {
       l.rotation.set(Math.sin(a)*.65,a,Math.cos(a)*.65);
     }
   }
-  // Keep only a wall-length sofa and the integrated cinewall in the living room.
-  if (!options.skipSofa) {
-    box(.94,.32,4.30,.74,.35,2.275,fabric,.035).name='living-fallback-sofa';
-    box(.18,.72,4.30,.28,.72,2.275,fabric,.035);
-    for(const z of [.20,4.35])box(.94,.48,.14,.74,.59,z,fabric,.025);
-    for(let i=0;i<5;i++){
-      box(.70,.19,.78,.79,.58,.61+i*.83,cushion,.035);
-      const back=box(.18,.45,.78,.43,.88,.61+i*.83,fabric,.035);back.rotation.z=-.1;
-    }
-  }
-  obstacle(.80,2.275,1.34,4.40);
+  if(!options.skipSofa)createJapandiCorner(scene);
+  addSaruleChair(scene);obstacle(3.62,.72,.84,.87);
+  obstacle(1.50,2.275,1.20,4.30);obstacle(2.285,3.8525,1.53,1.125);
+  addEketSideboard(scene);obstacle(.20,1.38,.35,1.40);
   addYoriRug(scene);
   addKerPinkArt(scene);
   // Oldinn Rome set: chestnut mango, round tops and tapered fluted pedestals.
@@ -105,8 +103,8 @@ export function furnish(scene, shared = {}, options = {}) {
     for(const o of [...scene.children])if(!parts.has(o)){scene.remove(o);g.add(o)}scene.add(g);
     obstacle(x,z,diameter,diameter);
   }
-  romeTable('rome-coffee-table-80',.80,.39,2.30,2.12);
-  romeTable('rome-coffee-table-60',.60,.52,2.48,2.75);
+  romeTable('rome-coffee-table-80',.80,.39,3.00,2.12);
+  romeTable('rome-coffee-table-60',.60,.52,3.18,2.55);
   const flowerPendant=addLivingFlowerLamp(scene);lights.push(flowerPendant.light);
   // Arliwalls Beige X Linnen reference, enlarged proportionally for the 108-inch TV.
   const linenCanvas=document.createElement('canvas');linenCanvas.width=linenCanvas.height=256;
@@ -119,12 +117,9 @@ export function furnish(scene, shared = {}, options = {}) {
   linenTexture.wrapS=linenTexture.wrapT=THREE.RepeatWrapping;linenTexture.repeat.set(5,3);
   const linen=mat('#eee5d5',.98,{map:linenTexture,bumpMap:linenTexture,bumpScale:.002});
   const beige=mat('#cfc1aa',.8);
-  const cinewall=box(.018,1.65,2.90,5.30,1.625,2.25,linen);cinewall.name='living-cinewall';
-  cinewall.userData.reference='Arliwalls Japandi Beige X Linnen';
-  cinewall.userData.proportionalAdaptation=true;
   const led=mat('#ffe4b6',.5,{emissive:'#ffd398',emissiveIntensity:1.3});
-  // The narrow warm halo sits between the floating linen panel and the wall.
-  box(.014,1.69,2.94,5.318,1.625,2.25,led,.009).name='living-cinewall-warm-halo';
+  const tvWall=addTVSideSlats(scene);lights.push(...tvWall.lights);
+  for(const old of existingChildren)if(old.userData.feature==='accentWall'){old.visible=false;old.userData.coveredByWallpaper=true;}
   const tv=box(.055,1.35,2.40,5.245,1.625,2.25,black,.012);tv.name='living-tv';
   box(.006,1.295,2.34,5.213,1.625,2.25,mat('#182022',.23,{metalness:.18})).name='living-tv-screen';
   const bench=new THREE.Group();bench.name='living-tv-console';scene.add(bench);
@@ -135,6 +130,7 @@ export function furnish(scene, shared = {}, options = {}) {
   for(let i=0;i<3;i++)consolePart(box(.014,.277,.888,4.892,.46,1.35+i*.90,linen,.003));
   box(.018,.012,2.98,4.94,.29,2.25,led).name='living-console-underlight';
   obstacle(5.13,2.25,.49,3.22);
+  addNorvetaOlive(scene);obstacle(4.90,4.10,.46,.46);
   // Reverse only the living arrangement in local plan coordinates. The shell's
   // existing houseRoot reflection is independent and remains unchanged.
   const livingGroup=new THREE.Group();livingGroup.name='living-arrangement';
@@ -143,6 +139,9 @@ export function furnish(scene, shared = {}, options = {}) {
   for(const child of [...scene.children])if(!existingChildren.has(child))intoLiving(child);
   scene.add(livingGroup);
   for(const o of obstacles){const minX=o.minX;o.minX=5.4-o.maxX;o.maxX=5.4-minX;o.living=true;}
+  addRoweMat(scene);
+  const passageShelf=addPassageShelf(scene);obstacles.push(passageShelf.obstacle);
+  const passageStorage=addPassageStorage(scene);obstacles.push(...passageStorage.obstacles);
   // A slim oval dining table with a space-saving upholstered wall bench.
   const diningX=1.10,diningZ=11.8;
   const diningChildren=new Set(scene.children);
@@ -232,6 +231,7 @@ export function furnish(scene, shared = {}, options = {}) {
   // Preserve the chosen kitchen after correcting the core rear face to z=8.40 m.
   kitchen.group.position.z=.15;
   for(const o of kitchen.obstacles){o.minZ+=.15;o.maxZ+=.15;}
+  addIslandStools(scene);
   obstacles.push(...kitchen.obstacles);lights.push(...kitchen.lights);
   const mirror = new THREE.Mesh(new THREE.CircleGeometry(.34,40),mat('#aab6ad',.15,{metalness:.8}));mirror.rotation.y=-Math.PI/2;mirror.position.set(5.3,1.5,6.55);scene.add(mirror);
 

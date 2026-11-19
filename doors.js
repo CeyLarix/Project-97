@@ -4,7 +4,7 @@ import * as THREE from './assets/three.module.js';
 export function buildOrderedDoors(parent,level){
  const white=new THREE.MeshStandardMaterial({color:'#f1eee5',roughness:.64}),bronze=new THREE.MeshStandardMaterial({color:'#8b7256',roughness:.4,metalness:.7}),steel=new THREE.MeshStandardMaterial({color:'#a9aeac',roughness:.3,metalness:.85}),glass=new THREE.MeshPhysicalMaterial({color:'#737b79',transparent:true,opacity:.38,roughness:.13,metalness:.05,depthWrite:false,side:THREE.DoubleSide});
  const doors=[];
- const definitions=level.id==='ground'?[[2.665,6.07,'Vision 3',true],[7.335,2.75,'Toilet'],[7.865,4.15,'Meterkast'],[6.05,2.75,'Trapkast'],[5.61,12.15,'Mancave']]:level.id==='first'?[[1.43,4.95,'Slaapkamer 1'],[1.43,2.35,'Meisjeskamer 2'],[2.68,2.35,'Meisjeskamer 3'],[6,3.3,'Badkamer']]:[[6,3.3,'Technische ruimte']];
+ const definitions=level.id==='ground'?[[2.665,6.07,'Vision 3',true],[7.335,2.75,'Toilet'],[7.865,4.15,'Meterkast'],[6.05,2.75,'Trapkast'],[5.61,12.15,'Mancave']]:level.id==='first'?[[1.48,4.95,'Slaapkamer 1'],[1.48,2.35,'Meisjeskamer 2'],[2.68,2.35,'Meisjeskamer 3'],[5.95,3.3,'Badkamer']]:[[5.945,3.3,'Technische ruimte']];
  const box=(p,w,h,d,x,y,z,m)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.castShadow=!m.transparent;o.receiveShadow=true;p.add(o);return o;};
  for(const[fixed,from,name,vision=false]of definitions){
   let wall,op;for(const w of level.walls){const hor=w.from[1]===w.to[1];const f=hor?w.from[1]:w.from[0];const hit=w.openings.find(o=>o.type==='door'&&Math.abs(o.from-from)<.001);if(Math.abs(f-fixed)<.001&&hit){wall=w;op=hit;break;}}
