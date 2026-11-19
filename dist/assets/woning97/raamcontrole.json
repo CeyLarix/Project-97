@@ -1,10 +1,11 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "sources": [
     "B9097 sale elevations",
     "signed9648 option drawing",
     "BPD Type-E/97 frame geometry",
-    "ViSoft bathroom retained"
+    "ViSoft bathroom retained",
+    "9648 nieuw · 25-9-2026"
   ],
   "ground": {
     "frontFixedWindows": [
@@ -69,5 +70,37 @@
     "frameBottom": 0.366,
     "frameTop": 2.546
   },
-  "note": "Metres in local plan coordinates. Interior frame interpretations from building geometry, not fabrication or surveyed site dimensions."
+  "note": "Metres in local plan coordinates. Interior frame interpretations from building geometry, not fabrication or surveyed site dimensions.",
+  "externalDoors": {
+    "entrance": {
+      "from": 6.086,
+      "to": 7.22,
+      "top": 2.546,
+      "source": "BPD original outer frame, along Z"
+    },
+    "storage": {
+      "from": 7.216,
+      "to": 8.35,
+      "top": 2.546,
+      "source": "BPD original outer frame, along X"
+    }
+  },
+  "bathroomSourceDifference": {
+    "constructionModel": {
+      "width": 0.7,
+      "bottom": 0.366,
+      "top": 2.546,
+      "fromX": 3.67,
+      "toX": 4.37
+    },
+    "retainedViSoftDesign": {
+      "width": 0.72,
+      "bottom": 0.352,
+      "top": 2.65,
+      "fromX": 3.63,
+      "toX": 4.35
+    },
+    "action": "Keep the user-confirmed ViSoft design unchanged; hide duplicate walkthrough window parts when it loads. Window schedule is needed to resolve the design/construction mismatch."
+  },
+  "rearDrawingStatus": "Rear 101A sliding and 102 annex glazing positions/widths read graphically from the option plan; approximate, not a fabrication schedule."
 }

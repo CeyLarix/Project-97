@@ -43,8 +43,10 @@ export function createNeighborhood({loadModel,loadTexture,loadPersonModel}={}){
  function loadAll(){if(!loadAllPromise)loadAllPromise=(async()=>{for(const h of HOUSES)await load(h.number);await loadPerson();})().catch(e=>{loadAllPromise=null;throw e;});return loadAllPromise;}
  function blocked(x,z,r=.17){
   if(person.state==='ready'){
-   if(Math.hypot(x-PERSON100.x,z-PERSON100.z)<PERSON100.bodyRadius+r)return true;
-   const b=person.parcelBounds;if(b&&x+r>b.min.x-.12&&x-r<b.max.x+.12&&z+r>b.min.z-.12&&z-r<b.max.z+.12)return true;
+   const fallen=person.fallenBounds;if(fallen&&x+r>fallen.minX&&x-r<fallen.maxX&&z+r>fallen.minZ&&z-r<fallen.maxZ)return true;
+   const travel=person.travelPosition,px=travel?.x??PERSON100.x,pz=travel?.z??PERSON100.z;if(Math.hypot(x-px,z-pz)<(travel ? .55 : PERSON100.bodyRadius)+r)return true;
+   if((group.userData.escortObstacles||[]).some(o=>Math.hypot(x-o.x,z-o.z)<o.radius+r))return true;
+   const b=person.travelPosition?null:person.parcelBounds;if(b&&x+r>b.min.x-.12&&x-r<b.max.x+.12&&z+r>b.min.z-.12&&z-r<b.max.z+.12)return true;
   }
   for(const h of HOUSES){const b=h.bounds;if(x<b.minX-r||x>b.maxX+r||z<b.minZ-r||z>b.maxZ+r)continue;const s=states.get(h.number);if(s.state!=='ready')return true;if((collisionGrids.get(h.number).get(Math.floor(x/.75)+','+Math.floor(z/.75))||[]).some(seg=>distanceToSegment(x,z,seg)<r))return true;}return false;}
  function walkable(x,z){return x>-12&&x<49&&z>-11.2&&z<14.15&&(z<-.16||x<-.22||x>11.05);}

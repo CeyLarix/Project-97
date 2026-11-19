@@ -1,0 +1,43 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import * as T from '../dist/assets/three.module.js';
+import {GLTFLoader} from '../dist/assets/addons/loaders/GLTFLoader.js';
+import {createPersonDance} from '../dist/person-dance.js';
+import {createDoorbellChime,setupDoorbell100,BELL100} from '../dist/doorbell100.js';
+import {addRequestedWallpapers} from '../dist/wallpaper.js';
+import {createNeighborhood,PERSON100} from '../dist/neighborhood.js';
+import {orientGroup,planWorldX} from '../dist/orientation.js';
+globalThis.self=globalThis;
+globalThis.document={createElement:()=>({width:0,height:0,getContext:()=>new Proxy({},{get:()=>()=>{},set:()=>true})})};
+const bytes=fs.readFileSync(new URL('../dist/'+PERSON100.file,import.meta.url)),loader=new GLTFLoader();
+loader.register(()=>({name:'skip_pixels',loadTexture:()=>Promise.resolve(new T.Texture())}));
+const parsed=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+const street=createNeighborhood({loadModel:async()=>({scene:new T.Group()}),loadTexture:()=>new T.Texture(),loadPersonModel:async()=>parsed});
+orientGroup(new T.Group()).add(street);await street.userData.loadAll();const person=street.userData.person.model;
+for(let i=0;i<120;i++){const a=i/120*Math.PI*2,x=PERSON100.x+Math.cos(a)*1.1,z=PERSON100.z+Math.sin(a)*1.1;assert.ok(!street.userData.blocked(x,z),'clear walking circuit outside parcel margin');}
+const dance=createPersonDance(()=>person),source=[];person.traverse(o=>{if(o.isMesh)source.push({o,position:o.geometry.attributes.position.array.slice(),uv:o.geometry.attributes.uv?.array.slice(),material:o.material})});
+dance.update(0,false);const before=new T.Box3().setFromObject(person),base=person.position.clone();dance.ring(100);
+for(let t=100;t<=2300;t+=40)dance.update(t,false);
+const squat=new T.Box3().setFromObject(person);assert.ok(before.max.y-squat.max.y>.4,'head drops substantially in deep squat');assert.ok(squat.min.y>-.005,'shoes do not sink into paving');
+const leg=source.find(p=>p.o.name==='leg_L');let bent=false;for(let i=0;i<leg.position.length;i+=3)if(leg.position[i+1]>.45&&leg.position[i+1]<.60&&leg.o.geometry.attributes.position.array[i+2]-leg.position[i+2]>.2)bent=true;assert.ok(bent,'knees bend forward, not whole-body translation');
+for(const p of source){assert.equal(p.o.material,p.material);if(p.uv)assert.deepEqual(p.o.geometry.attributes.uv.array,p.uv);assert.ok(p.o.geometry.attributes.position.array.every(Number.isFinite));}
+for(let t=2340;t<=11000;t+=40)dance.update(t,false);
+assert.ok(person.position.distanceTo(base)<1e-9);for(const p of source)assert.deepEqual(p.o.geometry.attributes.position.array,p.position,'exact rest geometry restored');
+dance.update(11200,true);dance.update(11300,true);assert.ok(person.position.distanceTo(base)>0,'original music dance still active');
+// WebAudio starts from the user's gesture and every oscillator is finite/cleaned up.
+const oscillators=[];const ctx={state:'running',currentTime:2,destination:{},resume:()=>Promise.resolve(),createOscillator(){const o={frequency:{},connect(){},disconnect(){},start(t){this.started=t},stop(t){this.stopped=t}};oscillators.push(o);return o},createGain(){return {gain:{setValueAtTime(){},exponentialRampToValueAtTime(){}},connect(){},disconnect(){}}}};
+assert.equal(createDoorbellChime(()=>ctx)(),true);assert.equal(oscillators.length,6);assert.ok(oscillators.every(o=>o.stopped>o.started&&o.stopped-o.started<1.4));assert.equal(createDoorbellChime(()=>{throw Error('unsupported')})(),false);
+const keyboard={};globalThis.addEventListener=(type,fn)=>{keyboard[type]=fn};const events={},canvas={addEventListener:(type,fn)=>events[type]=fn,getBoundingClientRect:()=>({left:0,top:0,width:800,height:600})};
+const camera=new T.PerspectiveCamera(64,4/3,.06,100);camera.position.set(planWorldX(BELL100.x-1.2),1.65,BELL100.z);const button={};let rings=0,allowed=true,visits=0;
+const actor={setEscort:state=>dance.setEscort(state),cancelRing:()=>dance.cancelRing(),ring:time=>{rings++;dance.ring(time)}};
+const bell=setupDoorbell100({street,camera,canvas,button,dance:actor,canInteract:()=>allowed,onApproach(){visits++;camera.position.set(planWorldX(BELL100.x-3.05),1.65,BELL100.z-1.15)}});
+bell.update(0);assert.equal(button.hidden,false);const target=street.getObjectByName('Eufy video doorbell · 100').getWorldPosition(new T.Vector3());camera.lookAt(target);camera.updateMatrixWorld(true);const clip=target.project(camera),click={clientX:(clip.x+1)*400,clientY:(1-clip.y)*300,pointerId:1,button:0};events.pointerdown(click);events.pointerup(click);await street.userData.loadPerson();assert.equal(bell.busy,true,'3D click starts scene');assert.equal(rings,0,'no immediate chime');
+bell.update(1000);assert.equal(button.textContent,'■ Scène stoppen');button.onclick();assert.equal(bell.busy,false,'same button cancels');
+camera.position.set(1,1.65,1);bell.update(1200);assert.equal(button.hidden,false,'fixed button stays visible remotely');assert.equal(bell.ring(),false,'E and 3D remain proximity limited');assert.equal(button.onclick(),true,'fixed button approaches and starts');await street.userData.loadPerson();
+for(let t=2000;t<33000;t+=100){bell.update(t);dance.update(t,false);}assert.equal(rings,1,'one delayed ring for complete scene');assert.equal(bell.state,'done');assert.ok(visits>=2);
+button.onclick();await street.userData.loadPerson();allowed=false;bell.update(35000);assert.equal(bell.busy,false,'leaving interaction mode safely cancels scene');assert.equal(button.hidden,false);
+const storeys=[{group:new T.Group()},{group:new T.Group()}];const accent=new T.Group();accent.userData.feature='accentWall';storeys[1].group.add(accent);addRequestedWallpapers(storeys);
+assert.equal(storeys[0].group.children.length,3);assert.equal(storeys[1].group.children.filter(g=>g.userData.wallpaper).length,6);assert.equal(accent.visible,false);assert.equal(accent.userData.coveredByWallpaper,true);
+const passage=storeys[0].group.getObjectByName('river-off-white-passage-core');passage.updateMatrixWorld(true);const ray=new T.Raycaster(new T.Vector3(2,1,6.5),new T.Vector3(1,0,0));assert.equal(ray.intersectObject(passage,true).length,0,'hall door opening remains unpapered');
+const rear=storeys[1].group.getObjectByName('river-sand-bedroom1-rear');rear.updateMatrixWorld(true);assert.equal(new T.Raycaster(new T.Vector3(1,1,9),new T.Vector3(0,0,1)).intersectObject(rear,true).length,0,'master window remains open');
+console.log('Passed: real uploaded Akin bends knees >40cm, grounded shoes, identical textures/materials and exact rest pose; bounded chime; nearby/debounced bell action; all 3 hall-core faces, 6 master faces and door/window openings.');

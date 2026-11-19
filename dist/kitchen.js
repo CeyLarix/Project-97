@@ -1,3 +1,4 @@
+import {addChampsVase} from './requested-decor.js';
 import * as THREE from './assets/three.module.js';
 
 // Fixed kitchen specification transcribed from the four supplied references.
@@ -77,15 +78,12 @@ export function furnishKitchen(group, materials={}) {
  }
  // Tall cupboard at the far end, with precise narrow door reveals.
  box(.64,2.48,.80,5.075,1.31,11.60,front,.006);
- for(const z of[11.40,11.80]){
-  box(.022,1.54,.388,4.743,.905,z,front,.004);
-  box(.022,.85,.388,4.743,2.12,z,front,.004);
- }
+ box(.022,1.90,.788,4.743,1.05,11.60,front,.004).name='single-right-tall-door';
+ box(.022,.53,.788,4.743,2.275,11.60,front,.004);
  // Counter-height ivory fronts beneath the sink niche.
  box(.64,.60,1.65,5.075,.40,10.375,front,.006);
  for(const z of[9.825,10.375,10.925]){
-  box(.022,.16,.538,4.743,.792,z,front,.003);
-  box(.022,.58,.538,4.743,.405,z,front,.004);
+  box(.022,.79,.538,4.743,.505,z,front,.004);
  }
  // True sink aperture: four pieces of stone surround the recessed bowl.
  const topY=.925;
@@ -215,14 +213,8 @@ export function furnishKitchen(group, materials={}) {
  // Base ventilation grille, multiple real slots rather than a solid black strip.
  box(.025,.083,.56,frontX-.006,.064,fz,black,.003);
  for(let i=0;i<6;i++)box(.006,.004,.47,frontX-.021,.034+i*.011,fz,steel,.001);
- // Restrained styling from the reference: amber vase, stems and three small vessels.
- const vaseMat=material('kitchenVase','#ae7b4e',.32,{metalness:.08});
- cyl(.065,.08,.18,3.34,1.04,9.60,vaseMat);cyl(.038,.065,.09,3.34,1.175,9.60,vaseMat);
- for(let i=0;i<7;i++){
-  const a=i*2.4,dx=Math.cos(a)*.10,dz=Math.sin(a)*.06;
-  tube([[3.34,.99,9.60],[3.34+dx*.5,1.35,9.60+dz*.5],[3.34+dx,1.53+(i%3)*.045,9.60+dz]],.0025,walnut);
-  for(let j=0;j<3;j++){const leaf=ball(3.34+dx*(.65+j*.14),1.35+j*.065,9.60+dz,.018,.043,.007,label);leaf.rotation.set(Math.sin(a)*.5,a,Math.cos(a)*.5);}
- }
+ // Replace the previous small amber arrangement with the chosen Champs vase.
+ addChampsVase(islandGroup);
  for(const z of[9.90,10.04,10.18]){cyl(.035,.032,.075,3.60,.982,z,porcelain);cyl(.028,.028,.002,3.60,1.021,z,black);}
  // Barco Sora 46244: 120 cm sand/champagne bar, 30 mm wide, six MINI GU10 heads.
  // Source: https://www.barco.nl/p/zandkleurige-opbouwspot-120cm-mini-gu10-verstelbare-lichtpunten/46244
@@ -247,10 +239,22 @@ export function furnishKitchen(group, materials={}) {
  features.islandSpotbar=islandLamp;
  // Collisions follow the stone overhang, so walking never clips through the counter.
  obstacle(2.65,9.27,3.84,11.78);
+ // 305355 PDF: 2 oven columns, three sink doors and one tall right column.
+ // 600/500/600 mm module interpretation; the supplied elevations contain no dimensions.
+ const fitZ=z=>z<=9.55?z:z<=11.20?9.55+(z-9.55)*1.50/1.65:11.05+(z-11.20)*.60/.80;
+ const coffeeShift=fitZ(10.88)-10.88;
+ cabinetryGroup.updateWorldMatrix(true,true);
+ cabinetryGroup.traverse(o=>{if(o===coffee||o.parent===coffee)return;
+  if(o.isInstancedMesh){const matrix=new THREE.Matrix4();for(let i=0;i<o.count;i++){o.getMatrixAt(i,matrix);matrix.elements[14]=fitZ(matrix.elements[14]);o.setMatrixAt(i,matrix);}o.instanceMatrix.needsUpdate=true;return;}
+  if(o.isMesh){const geom=o.geometry.clone(),p=geom.attributes.position,world=o.matrixWorld.clone(),inverse=world.clone().invert(),v=new THREE.Vector3();for(let i=0;i<p.count;i++){v.fromBufferAttribute(p,i).applyMatrix4(world);v.z=fitZ(v.z);v.applyMatrix4(inverse);p.setXYZ(i,v.x,v.y,v.z);}geom.computeVertexNormals();geom.computeBoundingBox();geom.computeBoundingSphere();o.geometry=geom;}
+  else if(o.isLight)o.position.z=fitZ(o.position.z);
+ });coffee.position.z+=coffeeShift;
+ kitchenGroup.userData.reference='Kitchen elevations 305355, four views';kitchenGroup.userData.dimensionsApproximate=true;
+ obstacles[0].maxZ=11.65;
  // Reflect each assembly around its own existing depth midpoint; do not move
  // the wall run or island footprint, which have different centres. Both AABB
  // colliders are symmetric about these centres and remain in plan coordinates.
- cabinetryGroup.position.z=8.35+12.00;cabinetryGroup.scale.z=-1;
+ cabinetryGroup.position.z=8.35+11.65;cabinetryGroup.scale.z=-1;
  islandGroup.position.z=9.27+11.78;islandGroup.scale.z=-1;
  return {obstacles,lights,fixtures:lights,group:kitchenGroup,features};
 }
